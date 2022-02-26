@@ -5,10 +5,32 @@
     xmlns:local="using:Weather_App"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-    <Grid>
-
+    mc:Ignorable="d" Width="1922"
+    >
+    <Grid Width="1920">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/1540016.jpg" Opacity="0.5"/>
+        </Grid.Background>
+        <Image Margin="98,29,1530,769" Source="/Assets/2.png"/>
+        <TextBlock TextAlignment="Center" TextWrapping="Wrap" Margin="98,304,1530,549" FontSize="48" SelectionChanged="TextBlock_SelectionChanged"><Run Text="Fog"/><LineBreak/><Run Text="Zagreb"/></TextBlock>
+        <TextBlock TextAlignment="Center" HorizontalAlignment="Left"  Height="142" Margin="95,492,0,0" Text="28°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="290" FontSize="72" RenderTransformOrigin="0.521,0.254"/>
+        <TextBox HorizontalAlignment="Left" Height="60" Margin="95,593,0,0" Text="Promjeni lokaciju" TextWrapping="Wrap" VerticalAlignment="Top" Width="282" FontSize="24" TextAlignment="Center" BorderThickness="0,0,0,0" Background="Transparent" FocusVisualPrimaryBrush="Transparent" SelectionHighlightColorWhenNotFocused="Transparent" FocusVisualSecondaryBrush="Transparent" SelectionHighlightColor="Transparent" BorderBrush="#66FFFFFF" >
+        </TextBox>
+        <TextBlock TextAlignment="Center" HorizontalAlignment="Left"  Height="142" Margin="98,896,0,0" Text="28°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" FontSize="48"/>
+        <TextBlock TextAlignment="Center" HorizontalAlignment="Left"  Height="142" Margin="356.83,896,0,0" Text="28°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" FontSize="48"/>
+        <TextBlock TextAlignment="Center" HorizontalAlignment="Left"  Height="142" Margin="615.66,896,0,0" Text="28°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" FontSize="48"/>
+        <TextBlock TextAlignment="Center" HorizontalAlignment="Left"  Height="142" Margin="879.15,896,0,0" Text="28°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" FontSize="48"/>
+        <TextBlock TextAlignment="Center" HorizontalAlignment="Left"  Height="142" Margin="1142.64,896,0,0" Text="28°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" FontSize="48"/>
+        <TextBlock TextAlignment="Center" HorizontalAlignment="Left"  Height="142" Margin="1406.13,896,0,0" Text="28°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" FontSize="48"/>
+        <TextBlock TextAlignment="Center" HorizontalAlignment="Left"  Height="142" Margin="1651,896,0,0" Text="28°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" FontSize="48"/>
+        <TextBlock TextAlignment="Center" HorizontalAlignment="Left"  Height="142" Margin="1521,50,0,0" Text="28°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="290" FontSize="72" RenderTransformOrigin="0.521,0.254"/>
+        <TextBlock TextAlignment="Center" HorizontalAlignment="Left"  Height="142" Margin="1521,246,0,0" Text="28°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="290" FontSize="72" RenderTransformOrigin="0.521,0.254"/>
+        <TextBlock TextAlignment="Center" HorizontalAlignment="Left"  Height="142" Margin="1521,414,0,0" Text="28°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="290" FontSize="72" RenderTransformOrigin="0.521,0.254"/>
+        <Image Margin="1325,50,358,863" Source="/Assets/8.png"/>
+        <Image Margin="1304,222,373,685" Source="/Assets/9.png"/>
+        <Image Margin="1300,395,379,536" Source="/Assets/4.png"/>
+        <TextBlock TextAlignment="Center" HorizontalAlignment="Left"  Height="142" Margin="1521,602,0,0" Text="28°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="290" FontSize="72" RenderTransformOrigin="0.521,0.254"/>
+        <Image Margin="1300,583,379,325" Source="/Assets/10.png"/>
+        <DatePicker Margin="88,768,0,0" VerticalAlignment="Top" FontSize="36" BorderThickness="0,0,0,0" Background="Transparent" FocusVisualPrimaryBrush="White" BorderBrush="White"  Foreground="Transparent"/>
     </Grid>
 </Page>
