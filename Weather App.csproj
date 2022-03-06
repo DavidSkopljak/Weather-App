@@ -132,6 +132,8 @@
   <ItemGroup>
     <Content Include="Assets\1.png" />
     <Content Include="Assets\10.png" />
+    <Content Include="Assets\11.png" />
+    <Content Include="Assets\12.png" />
     <Content Include="Assets\1540016.jpg" />
     <Content Include="Assets\2.png" />
     <Content Include="Assets\3.png" />
@@ -140,6 +142,7 @@
     <Content Include="Assets\7.png" />
     <Content Include="Assets\8.png" />
     <Content Include="Assets\9.png" />
+    <Content Include="Assets\output-onlinepngtools.png" />
     <Content Include="Assets\pozadina.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
@@ -165,6 +168,7 @@
       <Version>6.2.12</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

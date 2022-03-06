@@ -36,5 +36,10 @@ namespace Weather_App
         {
 
         }
+
+        private void TextBlock_SelectionChanged_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
