@@ -5,41 +5,38 @@
     xmlns:local="using:Weather_App"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Width="1922"
+    mc:Ignorable="d" Width="1922" Loaded="fetchForecast"
     >
-    <Grid Width="1920">
+    <Grid Margin="1,0,10,-308">
         <Grid.Background>
             <ImageBrush ImageSource="/Assets/1540016.jpg" Opacity="0.5"/>
         </Grid.Background>
         <Image Margin="98,29,1530,769" Source="/Assets/2.png"/>
-        <TextBlock TextAlignment="Center" TextWrapping="Wrap" Margin="98,304,1530,549" FontSize="48" SelectionChanged="TextBlock_SelectionChanged"><Run Text="Fog"/><LineBreak/><Run Text="Zagreb"/></TextBlock>
-        <TextBlock TextAlignment="Center" HorizontalAlignment="Left"  Height="142" Margin="95,492,0,0" Text="28°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="290" FontSize="72" RenderTransformOrigin="0.521,0.254"/>
-        <TextBox HorizontalAlignment="Left" Height="60" Margin="95,593,0,0" Text="Promjeni lokaciju" TextWrapping="Wrap" VerticalAlignment="Top" Width="282" FontSize="24" TextAlignment="Center" BorderThickness="0,0,0,0" FocusVisualPrimaryBrush="Transparent" SelectionHighlightColorWhenNotFocused="Transparent" FocusVisualSecondaryBrush="Transparent" SelectionHighlightColor="Transparent" BorderBrush="#66FFFFFF" >
+        <TextBlock Name="currentTemp" TextAlignment="Center" HorizontalAlignment="Left"  Height="142" Margin="95,289,0,0" Text="28°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="290" FontSize="72" RenderTransformOrigin="0.521,0.254"/>
+        <TextBox HorizontalAlignment="Left" Height="60" Margin="95,390,0,0" Text="Promjeni lokaciju" TextWrapping="Wrap" VerticalAlignment="Top" Width="282" FontSize="24" TextAlignment="Center" BorderThickness="0,0,0,0" FocusVisualPrimaryBrush="Transparent" SelectionHighlightColorWhenNotFocused="Transparent" FocusVisualSecondaryBrush="Transparent" SelectionHighlightColor="Transparent" BorderBrush="#66FFFFFF" IsReadOnly="True" >
         </TextBox>
-        <TextBlock TextAlignment="Center" HorizontalAlignment="Left"  Height="142" Margin="616,77,0,0" Text="28°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" FontSize="48"/>
-        <TextBlock TextAlignment="Center" HorizontalAlignment="Left"  Height="142" Margin="879,77,0,0" Text="28°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" FontSize="48"/>
-        <TextBlock TextAlignment="Center" HorizontalAlignment="Left"  Height="142" Margin="1143,77,0,0" Text="28°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" FontSize="48"/>
-        <TextBlock TextAlignment="Center" HorizontalAlignment="Left"  Height="142" Margin="1406,77,0,0" Text="28°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" FontSize="48"/>
-        <TextBlock TextAlignment="Center" HorizontalAlignment="Left"  Height="142" Margin="1651,77,0,0" Text="28°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" FontSize="48"/>
-        <TextBlock TextAlignment="Center" HorizontalAlignment="Left"  Height="172" Margin="1113,399,0,0" Text="28°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="266" FontSize="72" RenderTransformOrigin="0.521,0.254"/>
+        <TextBlock Name="weather_1" TextAlignment="Center" HorizontalAlignment="Left"  Height="142" Margin="616,77,0,0" Text="..." TextWrapping="Wrap" VerticalAlignment="Top" Width="171" FontSize="48" />
+        <TextBlock Name="weather_2" TextAlignment="Center" HorizontalAlignment="Left"  Height="142" Margin="879,77,0,0" Text="..." TextWrapping="Wrap" VerticalAlignment="Top" Width="171" FontSize="48" />
+        <TextBlock Name="weather_3" TextAlignment="Center" HorizontalAlignment="Left"  Height="142" Margin="1143,77,0,0" Text="..." TextWrapping="Wrap" VerticalAlignment="Top" Width="171" FontSize="48"/>
+        <TextBlock Name="weather_4" TextAlignment="Center" HorizontalAlignment="Left"  Height="142" Margin="1406,77,0,0" Text="..." TextWrapping="Wrap" VerticalAlignment="Top" Width="171" FontSize="48"/>
+        <TextBlock Name="weather_5" TextAlignment="Center" HorizontalAlignment="Left"  Height="142" Margin="1651,77,0,0" Text="..." TextWrapping="Wrap" VerticalAlignment="Top" Width="171" FontSize="48"/>
+        <TextBlock Name="pressure" TextAlignment="Center" HorizontalAlignment="Left"  Height="172" Margin="1113,399,0,0" Text="28°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="266" FontSize="72" RenderTransformOrigin="0.521,0.254"/>
         <Image Margin="980,348,725,547" Source="/Assets/9.png"/>
-        <SearchBox x:Name="mySearchBox" 
-    FocusOnKeyboardInput="True" Margin="98,650,1543,312"/>
-        <TextBlock TextAlignment="Center" HorizontalAlignment="Left"  Height="74" Margin="1143,348,0,0" Text="tlak zraka" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="36" RenderTransformOrigin="0.521,0.254" SelectionChanged="TextBlock_SelectionChanged_1"/>
-        <TextBlock TextAlignment="Center" HorizontalAlignment="Left"  Height="141" Margin="1094,722,0,0" Text="28°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="240" FontSize="72" RenderTransformOrigin="0.521,0.254"/>
-        <Image Margin="974,680,752,248" Source="/Assets/10.png"/>
-        <TextBlock TextAlignment="Center" HorizontalAlignment="Left"  Height="61" Margin="1121,680,0,0" Text="brzina vjetra" TextWrapping="Wrap" VerticalAlignment="Top" Width="199" FontSize="36" RenderTransformOrigin="0.521,0.254" SelectionChanged="TextBlock_SelectionChanged_1"/>
-        <TextBlock TextAlignment="Center" HorizontalAlignment="Left"  Height="172" Margin="655,399,0,0" Text="28°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="251" FontSize="72" RenderTransformOrigin="0.521,0.254"/>
+
+        <TextBlock TextAlignment="Center" HorizontalAlignment="Left"  Height="74" Margin="1143,348,0,0" Text="tlak zraka" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="36" RenderTransformOrigin="0.521,0.254" />
+        <TextBlock Name="windspeed" TextAlignment="Center" HorizontalAlignment="Left"  Height="141" Margin="1585,390,0,0" Text="28°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="240" FontSize="72" RenderTransformOrigin="0.521,0.254"/>
+        <Image Margin="1465,348,261,580" Source="/Assets/10.png"/>
+        <TextBlock TextAlignment="Center" HorizontalAlignment="Left"  Height="61" Margin="1612,348,0,0" Text="brzina vjetra" TextWrapping="Wrap" VerticalAlignment="Top" Width="199" FontSize="36" RenderTransformOrigin="0.521,0.254"/>
+        <TextBlock Name="humidity" TextAlignment="Center" HorizontalAlignment="Left"  Height="172" Margin="655,399,0,0" Text="28°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="251" FontSize="72" RenderTransformOrigin="0.521,0.254"/>
         <Image Margin="530,348,1188,547" Source="/Assets/8.png"/>
-        <TextBlock TextAlignment="Center" HorizontalAlignment="Left"  Height="74" Margin="684,348,0,0" Text="vlažnost" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" FontSize="36" RenderTransformOrigin="0.521,0.254" SelectionChanged="TextBlock_SelectionChanged_1"/>
-        <TextBlock  TextAlignment="Center" HorizontalAlignment="Left"  Height="148" Margin="622,725,0,0" Text="28°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="286" FontSize="72" RenderTransformOrigin="0.521,0.254"/>
-        <Image Margin="480,680,1209,240" Source="/Assets/4.png"/>
-        <TextBlock TextAlignment="Center" HorizontalAlignment="Left"  Height="80" Margin="655,680,0,0" Text="mogućnost kiše" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" FontSize="36" RenderTransformOrigin="0.521,0.254" SelectionChanged="TextBlock_SelectionChanged_1"/>
-        <TextBlock TextAlignment="Center" HorizontalAlignment="Left"  Height="141" Margin="1558,399,0,0" Text="28°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="240" FontSize="72" RenderTransformOrigin="0.521,0.254"/>
-        <Image Margin="1424,357,302,571" Source="/Assets/11.png"/>
-        <TextBlock TextAlignment="Center" HorizontalAlignment="Left"  Height="61" Margin="1585,357,0,0" Text="izlazak sunca" TextWrapping="Wrap" VerticalAlignment="Top" Width="258" FontSize="36" RenderTransformOrigin="0.521,0.254" SelectionChanged="TextBlock_SelectionChanged_1"/>
-        <TextBlock TextAlignment="Center" HorizontalAlignment="Left"  Height="141" Margin="1558,722,0,0" Text="28°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="240" FontSize="72" RenderTransformOrigin="0.521,0.254"/>
-        <Image Margin="1406,685,320,243" Source="/Assets/12.png"/>
-        <TextBlock TextAlignment="Center" HorizontalAlignment="Left"  Height="61" Margin="1585,680,0,0" Text="zalazak sunca" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" FontSize="36" RenderTransformOrigin="0.521,0.254" SelectionChanged="TextBlock_SelectionChanged_1"/>
+        <TextBlock TextAlignment="Center" HorizontalAlignment="Left"  Height="74" Margin="684,348,0,0" Text="vlažnost" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" FontSize="36" RenderTransformOrigin="0.521,0.254" />
+        <TextBlock Name="sunrise" TextAlignment="Center" HorizontalAlignment="Left"  Height="141" Margin="765,683,0,0" Text="28°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="240" FontSize="72" RenderTransformOrigin="0.521,0.254"/>
+        <Image Margin="613,631,1095,287" Source="/Assets/11.png"/>
+        <TextBlock TextAlignment="Center" HorizontalAlignment="Left"  Height="61" Margin="792,641,0,0" Text="izlazak sunca" TextWrapping="Wrap" VerticalAlignment="Top" Width="258" FontSize="36" RenderTransformOrigin="0.521,0.254" />
+        <TextBlock Name="sunset" TextAlignment="Center" HorizontalAlignment="Left"  Height="141" Margin="1395,667,0,0" Text="28°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="240" FontSize="72" RenderTransformOrigin="0.521,0.254"/>
+        <Image Margin="1243,630,483,298" Source="/Assets/12.png"/>
+        <TextBlock TextAlignment="Center" HorizontalAlignment="Left"  Height="61" Margin="1422,625,0,0" Text="zalazak sunca" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" FontSize="36" RenderTransformOrigin="0.521,0.254" />
+        <TextBox Name="input" FontSize="20" HorizontalAlignment="Left" Margin="95,456,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="39" Width="282"/>
+        <Button Click="setCity" Content="Potvrdi" Margin="95,500,0,0" VerticalAlignment="Top" Height="34" Width="103"/>
     </Grid>
 </Page>
