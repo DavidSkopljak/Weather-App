@@ -77,10 +77,6 @@ namespace Weather_App
             return Convert.ToString(details["list"][i]["weather"][0]["main"]);
         }
 
-
-
-
-
         //Postavljanje vrijednosti elemenata GUI-a
         private void FetchForecast(object sender, RoutedEventArgs e,JObject details1, JObject details2)
         {
@@ -114,12 +110,13 @@ namespace Weather_App
             weather_5.Text = LoopThroughData(details1, ref j, ref currentClimate);
 
             
-            humidity.Text = Convert.ToString(details2["list"][0]["humidity"]);
-            pressure.Text = Convert.ToString(details2["list"][0]["pressure"]);
-            windspeed.Text = Convert.ToString(details2["list"][0]["speed"]) + "km/h";
+            humidity.Text = Convert.ToString(details2["list"][0]["humidity"]) + "%";
+            pressure.Text = Convert.ToString(details2["list"][0]["pressure"]) + " hPa";
+            windspeed.Text = Convert.ToString(details2["list"][0]["speed"]) + " km/h";
             sunrise.Text = Convert.ToString(UnixTimeStampToDateTime(Convert.ToDouble(details2["list"][0]["sunrise"]))).Substring(9,10);
             sunset.Text = Convert.ToString(UnixTimeStampToDateTime(Convert.ToDouble(details2["list"][0]["sunset"]))).Substring(9, 10);
-            currentTemp.Text = Convert.ToString(details1["list"][0]["main"]["temp"])+"K";    
+            currentTemp.Text = Convert.ToString(details1["list"][0]["main"]["temp"])+"K"; 
+            
         }
 
         public static DateTime UnixTimeStampToDateTime(double unixTimeStamp)
