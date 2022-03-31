@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="Weather_Application.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Weather_Application"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/background.jpg" />
+        </Grid.Background>
+        <TextBlock x:Name="currentTemp" TextAlignment="Center" HorizontalAlignment="Left"  Height="142" Margin="89,307,0,0" Text="N/A" TextWrapping="Wrap" VerticalAlignment="Top" Width="290" FontSize="72" RenderTransformOrigin="0.521,0.254"/>
+        <TextBox x:Name="input" FontSize="20" HorizontalAlignment="Left" Margin="89,695,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="39" Width="282"/>
+        <Button Click="setCity" Content="Potvrdi" Margin="135,782,0,0" VerticalAlignment="Top" Height="34" Width="103"/>
+        <TextBlock x:Name="weather_1" TextAlignment="Center" HorizontalAlignment="Left"  Height="142" Margin="516,74,0,0" Text="N/A" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" FontSize="48" />
+        <TextBlock x:Name="weather_2" TextAlignment="Center" HorizontalAlignment="Left"  Height="142" Margin="791,74,0,0" Text="N/A" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" FontSize="48" RenderTransformOrigin="-0.232,0.333" />
+        <TextBlock x:Name="weather_3" TextAlignment="Center" HorizontalAlignment="Left"  Height="142" Margin="1070,74,0,0" Text="N/A" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" FontSize="48" RenderTransformOrigin="-0.145,0.461"/>
+        <TextBlock x:Name="weather_4" TextAlignment="Center" HorizontalAlignment="Left"  Height="142" Margin="1318,74,0,0" Text="N/A" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" FontSize="48"/>
+        <TextBlock x:Name="weather_5" TextAlignment="Center" HorizontalAlignment="Left"  Height="142" Margin="1569,74,0,0" Text="N/A" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" FontSize="48"/>
+        <TextBlock x:Name="humidity" TextAlignment="Center" HorizontalAlignment="Left"  Height="172" Margin="684,307,0,0" Text="N/A" TextWrapping="Wrap" VerticalAlignment="Top" Width="251" FontSize="72" RenderTransformOrigin="0.521,0.254"/>
+        <TextBlock x:Name="pressure" TextAlignment="Center" HorizontalAlignment="Left"  Height="172" Margin="1070,307,0,0" Text="N/A" TextWrapping="Wrap" VerticalAlignment="Top" Width="266" FontSize="72" RenderTransformOrigin="0.521,0.254"/>
+        <TextBlock x:Name="windspeed" TextAlignment="Center" HorizontalAlignment="Left"  Height="141" Margin="1505,307,0,0" Text="N/A" TextWrapping="Wrap" VerticalAlignment="Top" Width="240" FontSize="72" RenderTransformOrigin="0.521,0.254"/>
+        <TextBlock x:Name="sunrise" TextAlignment="Center" HorizontalAlignment="Left"  Height="141" Margin="791,540,0,0" Text="N/A" TextWrapping="Wrap" VerticalAlignment="Top" Width="240" FontSize="72" RenderTransformOrigin="0.521,0.254"/>
+        <TextBlock x:Name="sunset" TextAlignment="Center" HorizontalAlignment="Left"  Height="141" Margin="1395,540,0,0" Text="N/A" TextWrapping="Wrap" VerticalAlignment="Top" Width="240" FontSize="72" RenderTransformOrigin="0.521,0.254"/>
+
+    </Grid>
+</Page>
