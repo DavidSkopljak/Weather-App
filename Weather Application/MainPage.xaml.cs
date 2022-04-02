@@ -30,14 +30,14 @@ namespace Weather_Application
         public MainPage()
         {
             this.InitializeComponent();
-            Globals.place = "samobor,hr";
+
         }
 
 
         //Dohvacanje podataka sa API-eva u obliku JSON string-ova
         public void fetchForecast(object sender, RoutedEventArgs e)
         {
-            string[] s = Globals.place.Split(',');
+  
             var client1 = new RestClient("https://community-open-weather-map.p.rapiaapi.com/forecast?q=" + Globals.place);
             var client2 = new RestClient("https://community-open-weather-map.p.rapidapi.com/forecast/daily?q=" + Globals.place + "&units=metric");
             var request = new RestRequest();
